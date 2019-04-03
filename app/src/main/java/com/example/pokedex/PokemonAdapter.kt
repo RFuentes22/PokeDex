@@ -1,12 +1,13 @@
-package com.naldana.pokedesk
+package com.example.pokedex
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.naldana.ejemplo07.models.Pokemon
-import kotlinx.android.synthetic.main.list_element_pokemon.view.*
+import kotlinx.android.synthetic.main.list_item_pokemon.view.*
+import com.example.pokedex.models.Pokemon
+
 
 class PokemonAdapter(val items: List<Pokemon>) : RecyclerView.Adapter<PokemonAdapter.ViewHolder>() {
 
@@ -15,7 +16,7 @@ class PokemonAdapter(val items: List<Pokemon>) : RecyclerView.Adapter<PokemonAda
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.activity_main2, parent, false)
+            .inflate(R.layout.list_item_pokemon, parent, false)
 
         /*
          * TODO: Muestra el valor de contador de view creadas solo se hace aqui, para asegurar
@@ -39,7 +40,7 @@ class PokemonAdapter(val items: List<Pokemon>) : RecyclerView.Adapter<PokemonAda
 
         fun bind(item: Pokemon) = with(itemView) {
             tv_pokemon_name.text = item.name
-            tv_pokemon_type.text = item.type
+            tv_pokemon_id.text = item.id.toString()
         }
     }
 

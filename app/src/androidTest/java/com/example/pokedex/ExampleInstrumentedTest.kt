@@ -1,6 +1,5 @@
-package com.naldana.pokedesk
+package com.example.pokedex
 
-import android.content.Context
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
 
@@ -12,7 +11,7 @@ import org.junit.Assert.*
 /**
  * Instrumented test, which will execute on an Android device.
  *
- * @see [Testing documentation](http://d.android.com/tools/testing)
+ * See [testing documentation](http://d.android.com/tools/testing).
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
@@ -20,7 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-
-        assertEquals("com.naldana.pokedesk", appContext.packageName)
+        assertEquals("com.example.pokedex", appContext.packageName)
     }
 }

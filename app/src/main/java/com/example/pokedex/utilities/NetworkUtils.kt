@@ -1,14 +1,12 @@
-package com.naldana.pokedesk.utilities
+package com.example.pokedex.utilities
 
 import android.net.Uri
 import android.util.Log
-
 import java.io.IOException
-import java.io.InputStream
 import java.net.HttpURLConnection
 import java.net.MalformedURLException
 import java.net.URL
-import java.util.Scanner
+import java.util.*
 
 object NetworkUtils {
 
@@ -19,10 +17,10 @@ object NetworkUtils {
 
     fun buildUrl(pokeID: String): URL? {
         val builtUri = Uri.parse(POKEMON_API_BASE_URL)
-                .buildUpon()
-                .appendPath(POKEMON_INFO)
-                .appendPath(pokeID)
-                .build()
+            .buildUpon()
+            .appendPath(POKEMON_INFO)
+            .appendPath(pokeID)
+            .build()
 
         var url: URL? = null
         try {
