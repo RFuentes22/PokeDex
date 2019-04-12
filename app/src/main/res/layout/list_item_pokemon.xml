@@ -7,6 +7,7 @@
     android:layout_gravity="center"
     android:elevation="2dp"
     card_view:cardUseCompatPadding="true"
+    tools:context=".MainActivity"
     card_view:cardCornerRadius="@dimen/card_view_radius">
 
     <RelativeLayout
@@ -53,6 +54,23 @@
             android:textSize="20sp" />
 
 
+        <TextView
+                android:layout_marginTop="@dimen/small_gap"
+                android:id="@+id/tv_pokemon_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pokemon_name"
+                android:layout_alignLeft="@id/tv_pokemon_name"
+                android:text="Height" />
+
+        <TextView
+                android:layout_marginTop="@dimen/small_gap"
+                android:id="@+id/tv_pokemon_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pokemon_height"
+                android:layout_alignLeft="@id/tv_pokemon_name"
+                android:text="Weight" />
 
 
     </RelativeLayout>
